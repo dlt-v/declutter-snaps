@@ -43,7 +43,9 @@ def cli(mode: str):
     if mode:
         click.echo(
             f"Successfully deleted ~{memory_taken}MB worth of data.")
-    else:
+    if not mode and memory_taken != 0:
         click.echo(
             f"Memory taken overall: ~{memory_taken} MB.")
         click.echo("Run the command with 'del' flag to delete said files.")
+    else:
+        click.echo("Your screenshot folders are empty of composites right now.")
