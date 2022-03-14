@@ -16,6 +16,6 @@ setup(
     install_requires=read_requirements(),
     entry_points="""
         [console_scripts]
-        de-snap=de-snap.cli:cli
+        desnap=desnap.cli:cli
     """,
 )
